@@ -1,5 +1,7 @@
 import express from 'express';
+
 import amqp, { Channel } from 'amqplib';
+
 import axios from 'axios';
 
 if (!process.env.PORT) {
@@ -31,7 +33,7 @@ async function main() {
   // Broadcasts the "viewed" message to other microservices.
   //
   function broadcastViewedMessage(channel: Channel, videoId: string) {
-    console.log(`Publishing message on "viewed" exchange ////);
+    console.log(`Publishing message on "viewed" exchange`);
 
     const msg = { video: { id: videoId } };
     const jsonMsg = JSON.stringify(msg);
@@ -58,7 +60,7 @@ async function main() {
 
   app.listen(PORT, () => {
     // Starts the HTTP server.
-    console.log(`Microservice online.    ${PORT}`);
+    console.log(`Microservice online.....    ${PORT}`);
   });
 }
 
