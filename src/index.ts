@@ -33,7 +33,7 @@ async function main() {
   // Broadcasts the "viewed" message to other microservices.
   //
   function broadcastViewedMessage(channel: Channel, videoId: string) {
-    console.log(`Publishing message on "viewed" exchange`);
+    console.log(`Publishing message on "viewed" exchange!`);
 
     const msg = { video: { id: videoId } };
     const jsonMsg = JSON.stringify(msg);
