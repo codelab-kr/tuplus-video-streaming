@@ -1,7 +1,0 @@
-#!/usr/bin/env sh
-. "$(dirname -- "$0")/_/husky.sh"
-
-echo "video-streaming Running lint-staged..."
-echo "cd video-streaming && npx lint-staged" 
-cd video-streaming && npm run lint
-echo "Done!"
