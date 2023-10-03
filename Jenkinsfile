@@ -17,7 +17,6 @@ node {
 
      stage('Push image') {
          docker.withRegistry('https://ap-seoul-1.ocir.io', 'ocir') {
-         // docker.withRegistry('https://register.hub.docker.com', 'docker-hub') {   
              app.push("${env.BUILD_NUMBER}")
          }
      }
